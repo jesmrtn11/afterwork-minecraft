@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    volumes:
+      - ./poison:/data
+    restart: unless-stopped
+    environment:
+      RESOURCE_PACK: http\://13.53.187.87/pack.zip
+      EULA: "TRUE"
+      OPS: jesmrtn11,Tinatiel
+      MEMORY: 2G

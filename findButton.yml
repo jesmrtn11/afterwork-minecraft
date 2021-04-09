@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  minecraft:
+    image: itzg/afterwork-minecraft
+    ports:
+      - 25565:25565
+    volumes:
+      - ./findButton:/data
+    restart: unless-stopped
+    environment:
+      EULA: "TRUE"
+      OPS: jesmrtn11,Tinatiel
+      MEMORY: 2G
